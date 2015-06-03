@@ -1,0 +1,19 @@
+(function(){
+    var customersController= function($scope){
+        $scope.reverse=false;
+        $scope.customers=[
+            {id:1,name:'Nicola',city:'Cagliari',orderTotal:45.999,joined:'2015-04-06'},
+            {id:2,name:'Marco',city:'Frankfurt',orderTotal:38.999,joined:'2015-04-17'},
+            {id:3,name:'Elena',city:'Paris',orderTotal:23.67,joined:'2015-02-12'},
+            {id:4,name:'Alexander',city:'Berlin',orderTotal:10.49,joined:'2015-08-27'},
+            {id:5,name:'Sebastian',city:'Munchen',orderTotal:422.999,joined:'2015-05-04'},
+            {id:6,name:'Nicola',city:'Roma',orderTotal:105.35,joined:'2015-02-01'},
+        ];
+        $scope.sortByField=function(fieldToSort){
+            $scope.sortBy=fieldToSort;
+            $scope.reverse=!$scope.reverse;
+        }
+    };
+    customersController.$inject=['$scope'];
+    angular.module('customersApp').controller('customersController',customersController);
+})();

@@ -1,0 +1,20 @@
+<h2> Orders of {{ customer.name }}</h2>
+<br/>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Order Date</th>
+    </tr>
+    <tr ng-repeat="order in orders">
+        <td>{{order.id}}</td>
+        <td>{{order.name}}</td>
+        <td>{{order.amount | currency}}</td>
+        <td>{{order.date | date }}</td>
+    </tr>
+</table>
+<div style="text-align: center;">
+    Total orders: <b>{{ orders.length}}</b>
+    <br/><br/>
+    <a href="#/" class="btn btn-primary">Back to Customers</a>
+</div>

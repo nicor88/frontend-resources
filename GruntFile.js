@@ -22,15 +22,16 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            js: {
-                src: ['public/js/app/*.js','public/js/app/*/*.js'],
-                dest: 'public/js/mean.js'
+            build: {
+                files: {
+                    'public/customers/js/customers.js': ['public/customers/js/app/*.js', 'public/customers/js/app/*/*.js']
+                }
             }
         },
         uglify: {
             build: {
                 files: {
-                    'public/js/app.min.js': ['public/js/app/*.js','public/js/app/*/*.js']
+                    'public/customers/js/customers.min.js': ['public/customers/js/app/*.js', 'public/customers/js/app/*/*.js']
                 }
             }
         }
@@ -38,5 +39,6 @@ module.exports = function(grunt) {
     });
     grunt.registerTask('start server', ['nodemon']);
     grunt.registerTask('create app.js', ['concat']);
-    grunt.registerTask('minification', ['cssmin','uglify']);
+    grunt.registerTask('minification', ['uglify']);
+    //grunt.registerTask('minification', ['cssmin','uglify']);
 };
