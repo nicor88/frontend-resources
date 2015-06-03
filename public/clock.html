@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <script src="../libs/angular/angular.min.js"></script>
+</head>
+<body ng-app="clock">
+<div ng-controller="ClockController">
+    <h2>Previous: {{ time.previous |date:'yyyy-MM-dd HH:mm:ss'}}</h2>
+    <h2>Now: {{ time.now | date:'yyyy-MM-dd HH:mm:ss'}} </h2>
+</div>
+<script type="text/javascript">
+    var app = angular.module('clock', []);
+    app.controller('ClockController', function($scope) {
+        $scope.time = {
+            now:new Date(),
+            previous:0
+        };
+        var updateClock = function() {
+            $scope.time.previous = $scope.time.now;
+            $scope.time.now = new Date();
+        };
+        setInterval(function() {
+            $scope.$apply(updateClock);
+        }, 1000);
+        updateClock();
+    });
+</script>
+</body>
+</html>
