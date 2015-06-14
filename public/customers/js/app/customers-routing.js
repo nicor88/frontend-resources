@@ -9,7 +9,7 @@ var app = angular.module('customersApp', ['ngRoute']);
             .when('/orders/:customerId',{
                 templateUrl : '../customers/views/orders.html',
                 controller  : 'ordersController'
-            })
+            });
     };
     routing.$inject=['$routeProvider'];
     app.config(routing);

@@ -3,6 +3,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.initConfig({
         // configure nodemon
         nodemon: {
@@ -34,11 +35,14 @@ module.exports = function(grunt) {
                     'public/customers/js/customers.min.js': ['public/customers/js/app/*.js', 'public/customers/js/app/*/*.js']
                 }
             }
+        },
+        jshint: {
+            files: ['Gruntfile.js', 'public/customers/js/app/**/*.js']
         }
-
     });
     grunt.registerTask('start server', ['nodemon']);
     grunt.registerTask('create app.js', ['concat']);
     grunt.registerTask('minification', ['uglify']);
+    grunt.registerTask('validate JS', ['jshint']);
     //grunt.registerTask('minification', ['cssmin','uglify']);
 };
