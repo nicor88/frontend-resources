@@ -56,7 +56,7 @@ var app = angular.module('customersApp', ['ngRoute']);
             return customers;
         };
         factory.getCustomer = function (customerId){
-            console.log('CustomerID: '+customerId);
+            //console.log('CustomerID: '+customerId);
             for(var i=0;i<customers.length;i++){
                 if(customers[i].id==parseInt(customerId)){
                     return customers[i];

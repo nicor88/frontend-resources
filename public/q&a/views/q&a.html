@@ -1,0 +1,17 @@
+<h3>{{currentquestion.question}}</h3>
+
+    <div ng-repeat="n in currentquestion.answers">
+        <label>
+            <input type="radio" name="answer" ng-model="$parent.selectedAnswer" value="{{n}}" required />
+            {{n.answer}}
+        </label>
+    </div>
+
+<br>
+
+<button class="btn btn-success" ng-click="nextQuestion();">Next</button>
+<br/><br/>
+<button class="btn btn-danger" ng-click="reset();">Reset Answers</button>
+<!--<h3><b>Selected answer:</b> {{selectedAnswer}}</h3>-->
+<h3><b>Answers to save:</b> {{answersToSave}}</h3>
+<br/>

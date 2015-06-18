@@ -25,7 +25,8 @@ module.exports = function(grunt) {
         concat: {
             build: {
                 files: {
-                    'public/customers/js/customers.js': ['public/customers/js/app/*.js', 'public/customers/js/app/*/*.js']
+                    'public/customers/js/customers.js': ['public/customers/js/app/*.js', 'public/customers/js/app/*/*.js'],
+                    'public/q&a/js/q&a.js': ['public/q&a/js/app/*.js', 'public/q&a/js/app/*/*.js']
                 }
             }
         },
