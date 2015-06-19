@@ -29,15 +29,15 @@ module.exports = function(app){
             ]},
             {id:3,question:'Domanda di prova3',answers:[
                 {id_question:1,answer:'scegli1'},
-                {id_question:3,answer:'scegli2'}
+                {id_question:4,answer:'scegli4'}
+            ]},
+            {id:4,question:'Domanda di prova3',answers:[
+                {id_question:'last',answer:'last question'},
+                {id_question:3,answer:'scegli3'}
             ]}
-            ];
+        ];
         for (var i=0;i<questions.length;i++){
             if(questions[i].id==id_question){
-                var answers=questions[i].answers;
-                answers.forEach(function(a){
-                    console.log(a.answer);
-                });
                 return res.json(questions[i]);
             }
         }
