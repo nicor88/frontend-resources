@@ -8,12 +8,16 @@ module.exports = function(app){
     app.get('/clock', function(req, res) {
         res.sendFile('public/clock.html',{root: __dirname });
     });
+    app.get('/directives', function(req, res) {
+        res.sendFile('public/directives.html',{root: __dirname });
+    });
     app.get('/iteration', function(req, res) {
         res.sendFile('public/iteration.html',{root: __dirname });
     });
     app.get('/q&a', function(req, res) {
         res.sendFile('public/q&a/q&a-home.html',{root: __dirname });
     });
+
 
     //API
     app.get('/q&a/question/:id', function(req, res) {
