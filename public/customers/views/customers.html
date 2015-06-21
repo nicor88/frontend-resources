@@ -1,5 +1,5 @@
 Filter by name: <input type="text" ng-model="customerFilter.name"/>
-<br />
+<br /><br />
 <table class="table">
     <tr>
         <th ng-click="sortByField('name')">Name</th>
@@ -8,7 +8,7 @@ Filter by name: <input type="text" ng-model="customerFilter.name"/>
         <th ng-click="sortByField('joined')">Joined</th>
         <th> </th>
     </tr>
-    <tr ng-repeat="customer in customers | filter: customerFilter | orderBy:sortBy:!reverse">
+    <tr ng-repeat="customer in customers | filter: customerFilter | orderBy:sortBy:!reverse" class="repeat-animation">
         <td>{{customer.name}}</td>
         <td>{{customer.city}}</td>
         <td>{{customer.orderTotal | currency}}</td>

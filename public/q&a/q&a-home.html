@@ -12,10 +12,25 @@
     <script src="js/q&a.js"></script>
 </head>
 <body ng-app="q&aApp">
-<h2>Question and Answers</h2>
-<div ng-view></div>
+<header>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li> <a href="#/">Question and Answers</a> </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <a href="/" >Back to Frontend Resources</a> </li>
+        </ul>
+    </nav>
+</header>
 <div style="text-align: center;">
-    <a href="/" class="btn btn-success" >Back to Frontend Resources</a>
+    <h2>Question and Answers</h2>
 </div>
+
+<div ng-view></div>
+
+<!--<div style="text-align: center;">
+    <a href="/" class="btn btn-success" >Back to Frontend Resources</a>
+</div>-->
+
 </body>
 </html>

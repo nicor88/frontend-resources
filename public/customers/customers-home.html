@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Customers</title>
-    <link href="../libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/customers.css" rel="stylesheet">
+    <link href="../libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/customers.css" rel="stylesheet" type="text/css">
+    <link href="css/animations.css" rel="stylesheet" type="text/css">
     <script src="../libs/jquery/dist/jquery.min.js"></script>
     <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../libs/angular/angular.js"></script>
     <script src="../libs/angular-route/angular-route.js"></script>
+    <script src="../libs/angular-animate/angular-animate.js"></script>
     <script src="js/customers.js"></script>
 </head>
-
 <body ng-app="customersApp">
-<h2>Customers Home</h2>
 
-<div ng-view></div>
+<header>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li> <a href="#/">Customers</a> </li>
+        </ul>
+        <ul class="nav navbar-nav">
+            <li> <a href="#/orders">Orders</a> </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <a href="/" >Back to Frontend Resources</a> </li>
+        </ul>
+    </nav>
+</header>
 
-<div style="text-align: center;">
+<main>
+    <div ng-view class="slide-animation"></div>
+</main>
+
+<!--<div style="text-align: center;">
     <a href="/" class="btn btn-success" >Back to Frontend Resources</a>
-</div>
+</div>-->
 </body>
 </html>

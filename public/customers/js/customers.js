@@ -1,4 +1,4 @@
-var app = angular.module('customersApp', ['ngRoute']);
+var app = angular.module('customersApp', ['ngRoute','ngAnimate']);
 (function() {
     var routing = function ($routeProvider) {
         $routeProvider
@@ -6,13 +6,29 @@ var app = angular.module('customersApp', ['ngRoute']);
                 templateUrl : '../customers/views/customers.html',
                 controller  : 'customersController'
             })
-            .when('/orders/:customerId',{
+            .when('/orders',{
                 templateUrl : '../customers/views/orders.html',
                 controller  : 'ordersController'
-            });
+            })
+            .when('/orders/:customerId',{
+                templateUrl : '../customers/views/customerOrders.html',
+                controller  : 'customerOrdersController'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });;
     };
     routing.$inject=['$routeProvider'];
     app.config(routing);
+})();
+(function(){
+    var customerOrdersController= function($scope,$routeParams,customersFactory){
+        var customerId=$routeParams.customerId;
+        $scope.customer=customersFactory.getCustomer(customerId);
+        $scope.orders=customersFactory.getOrders();
+    };
+    customerOrdersController.$inject=['$scope','$routeParams','customersFactory'];
+    angular.module('customersApp').controller('customerOrdersController',customerOrdersController);
 })();
 (function(){
     var customersController= function($scope,customersFactory){
@@ -33,12 +49,11 @@ var app = angular.module('customersApp', ['ngRoute']);
     angular.module('customersApp').controller('customersController',customersController);
 })();
 (function(){
-    var ordersController= function($scope,$routeParams,customersFactory){
-        var customerId=$routeParams.customerId;
-        $scope.customer=customersFactory.getCustomer(customerId);
-        $scope.orders=customersFactory.getOrders();
+    var ordersController= function($scope,customersFactory){
+        $scope.message='Total orders';
+
     };
-    ordersController.$inject=['$scope','$routeParams','customersFactory'];
+    ordersController.$inject=['$scope','customersFactory'];
     angular.module('customersApp').controller('ordersController',ordersController);
 })();
 (function(){
