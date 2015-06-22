@@ -3,11 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Directives on Angular</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <script src="libs/angular/angular.js"></script>
     <script src="js/directivesModule.js"></script>
 </head>
 <body>
 <h2>Directives Examples</h2>
 <hello-world></hello-world>
+<br/><br/>
+<div ng-controller="Controller">
+    <h3>Shared scope</h3>
+    <shared-scope></shared-scope>
+    <h3>Isolated scope</h3>
+    <isolated-scope name="{{customer.name}}"></isolated-scope>
+    <h3>Isolated scope 2</h3>
+    <isolated-scope2 fullname="{{customer.name}}"></isolated-scope2>
+    <h3>Isolated scope with Object</h3>
+    <isolated-scope-with-object datasource="customer"></isolated-scope-with-object>
+    <h3>Isolated scope with event</h3>
+    <isolated-scope-with-event action="changeCustomer('prova','prova street')" datasource="customer"></isolated-scope-with-event>
+
+    <br/><br/>
+    <div link-demo>Click on me!</div>
+</div>
 </body>
 </html>
