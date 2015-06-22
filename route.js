@@ -14,6 +14,9 @@ module.exports = function(app){
     app.get('/iteration', function(req, res) {
         res.sendFile('public/iteration.html',{root: __dirname });
     });
+    app.get('/angular-tree', function(req, res) {
+        res.sendFile('public/angular-tree.html',{root: __dirname });
+    });
     app.get('/q&a', function(req, res) {
         res.sendFile('public/q&a/q&a-home.html',{root: __dirname });
     });

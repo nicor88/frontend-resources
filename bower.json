@@ -23,6 +23,7 @@
     "highcharts-ng": "~0.0.8",
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.4",
-    "backbone": "~1.2.0"
+    "backbone": "~1.2.0",
+    "angular-ui-tree": "~2.5.0"
   }
 }
