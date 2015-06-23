@@ -1,10 +1,10 @@
 (function(){
-    var customersController= function($scope,customersFactory){
+    var customersController= function($scope,customersService){
         $scope.reverse=false;
         $scope.customers = [];
 
         function init(){
-            $scope.customers=customersFactory.getCustomers();
+            $scope.customers=customersService.getCustomers();
         }
 
         init();
@@ -13,6 +13,6 @@
             $scope.reverse=!$scope.reverse;
         };
     };
-    customersController.$inject=['$scope','customersFactory'];
+    customersController.$inject=['$scope','customersService'];
     angular.module('customersApp').controller('customersController',customersController);
 })();
