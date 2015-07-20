@@ -21,6 +21,9 @@ module.exports = function(app){
         res.sendFile('public/q&a/q&a-home.html',{root: __dirname });
     });
 
+    app.get('/calendar', function(req, res) {
+        res.sendFile('public/calendar.html',{root: __dirname });
+    });
 
     //API
     app.get('/q&a/question/:id', function(req, res) {

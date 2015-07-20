@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/moment/min/moment.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
