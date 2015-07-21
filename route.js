@@ -25,6 +25,10 @@ module.exports = function(app){
         res.sendFile('public/calendar.html',{root: __dirname });
     });
 
+    app.get('/angular-ui', function(req, res) {
+        res.sendFile('public/angular-ui.html',{root: __dirname });
+    });
+
     //API
     app.get('/q&a/question/:id', function(req, res) {
         var id_question=req.params.id;

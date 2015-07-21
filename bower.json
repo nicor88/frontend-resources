@@ -25,6 +25,7 @@
     "bootstrap": "~3.3.4",
     "backbone": "~1.2.0",
     "angular-ui-tree": "~2.5.0",
-    "eonasdan-bootstrap-datetimepicker": "~4.14.30"
+    "eonasdan-bootstrap-datetimepicker": "~4.14.30",
+    "angular-bootstrap": "~0.13.0"
   }
 }
