@@ -1,7 +1,7 @@
 {
   "name": "frontend-resources",
   "version": "0.0.1",
-  "description": "frontend resources and examples",
+  "description": "Examples based on Angular 1.x",
   "main": "server.js",
   "scripts": {
     "install": "bower install -f",
