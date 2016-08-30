@@ -1,8 +1,7 @@
-# frontend-resources
+# Frontend-resources
 
-## Description
-**frontend-resources** repository contains various examples mostly based on AngularJs, Bootstrap, Highcharts
+Collection of frontend resources:
 
-## install needed libs:
-* npm install
-* bower install
+* angular-examples
+* angular-directives
++ angular-testing
