@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <title>ng Repeat Directive</title>
+    <script src="../bower_components/angular/angular.js"></script> <!-- Angular v1.4.8-->
+    <script src = "../js/controllers/mainController.js"></script>
+    <script src="../js/directives/sampleDirectiveWithControllerAs.js"></script>
+</head>
+
+<body>
+<div ng-controller="mainController">
+    {{customers}}
+    <br/><br/>
+    <with-controller-as datasource="customers" add="addCustomer"></with-controller-as>
+</div>
+</body>
+</html>

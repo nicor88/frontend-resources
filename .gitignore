@@ -1,3 +1,11 @@
 .idea
+
+# angular-examples
 angular-examples/node_modules
 angular-examples/public/libs
+
+# angular-didrectives
+angular-directives/node_modules
+angular-directives/bower_components
+
+npm-debug.log

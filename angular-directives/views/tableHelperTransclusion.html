@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Helper with Transclusione</title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../js/controllers/mainController.js"></script>
+    <script src="../js/directives/tableHelperTransclusion.js"></script>
+    <script src="../js/directives/tableHelperTranscludeHeading.js"></script>
+</head>
+<style>
+    th { text-align:left; background-color: #ccc;cursor:pointer;}
+    td { width:150px; }
+    .tableHelper { font-family: 'Arial' }
+    .rowCount { font-weight: bold; }
+</style>
+<body ng-app="myApp">
+    <div ng-controller="mainController">
+        <table-helper datasource="customers">
+            <header mapsto="name" >Name</header>
+            <header mapsto="street" >Street</header>
+            <header mapsto="age" >Age</header>
+        </table-helper>
+        <button ng-click="addCustomer()">Add New Customer</button>
+    </div>
+</body>
+</html>

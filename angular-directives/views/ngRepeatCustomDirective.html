@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <title>ng Repeat Directive</title>
+    <script src="../bower_components/angular/angular.js"></script> <!-- Angular v1.4.8-->
+    <script src = "../js/controllers/mainController.js"></script>
+    <script src="../js/directives/ngRepeatDirective.js"></script>
+</head>
+
+<body>
+    <div ng-controller="mainController">
+        Parent Scope Customers:
+        <br /><br />
+        <ul><li ng-repeat="cust in customers">{{ cust.name }}</li></ul>
+        <ng-repeat-custom datasource="customers" add="addCustomer">
+        </ng-repeat-custom>
+    </div>
+</body>
+</html>
