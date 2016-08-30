@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Transclusion Directives</title>
+    <script src="../bower_components/angular/angular.js"></script> <!-- Angular v1.4.8-->
+    <script src="../js/directives/transclusionDirective.js"></script>
+</head>
+<body>
+    <h3>Directive with Transclusion</h3>
+    <transclusion tasks="tasks">
+        <div ng-repeat="task in tasks track by $index">
+            <strong>{{ task.title}}</strong>
+        </div>
+    </transclusion>
+</body>
+</html>

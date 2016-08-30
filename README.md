@@ -4,4 +4,4 @@ Collection of frontend resources:
 
 * angular-examples
 * angular-directives
-+ angular-testing
+* angular-testing

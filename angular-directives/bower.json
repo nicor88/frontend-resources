@@ -1,0 +1,19 @@
+{
+  "name": "angular-directives",
+  "description": "Examples to build custom-directives on AngularJS 1.x mostly based on Dan Wahlin course on Udemy",
+  "main": "",
+  "authors": [
+    "nicor88"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "directives"
+  ],
+  "homepage": "https://github.com/nicor88/frontend-resources",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.8",
+    "bootstrap": "^3.3.7"
+  }
+}

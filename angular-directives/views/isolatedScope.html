@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shared Scope</title>
+</head>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../js/controllers/mainController.js"></script>
+<script src="../js/directives/isolatedScopeDirective.js"></script>
+<script src="../js/directives/isolatedScopeWithStringDirective.js"></script>
+<script src="../js/directives/isolatedScopeWithObjectDirective.js"></script>
+<script src="../js/directives/isolatedScopeWithEventDirective.js"></script>
+<body ng-app="myApp">
+    <div ng-controller="mainController">
+        Data inside controller : {{user}}
+        <br>
+        <button ng-click="changeUser()">Change User Globally</button>
+        <br/><br/>
+        <h3> Isolated Scope</h3>
+        <isolated-scope>
+
+        </isolated-scope>
+        <br/><br/>
+        <h3> Isolated Scope With Strings (One Way Binding, with @)</h3>
+        <isolated-scope-with-string name="{{user.name}}" surname="{{user.surname}}" other-name="{{user.secondName}}">
+
+        </isolated-scope-with-string>
+        <br/><br/>
+        <h3> Isolated Scope With Object (Two Way Binding, with =)</h3>
+        <isolated-scope-with-object user="user">
+
+        </isolated-scope-with-object>
+        <br/><br/>
+        <h3> Isolated Scope With Event</h3>
+        <isolated-scope-with-event user="user" change-user-external="changeUser()">
+
+        </isolated-scope-with-event>
+    </div>
+</body>
+</html>

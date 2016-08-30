@@ -1,0 +1,24 @@
+{
+  "name": "angular-directives",
+  "version": "0.0.1",
+  "description": "Examples to build custom-directives on AngularJS 1.x mostly based on Dan Wahlin course on Udemy",
+  "main": "",
+  "scripts": {
+    "install": "bower install -f",
+    "start": "grunt serve",
+    "test": "true"
+  },
+  "keywords": [
+    "angular",
+    "directives"
+  ],
+  "author": "nicor88",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
