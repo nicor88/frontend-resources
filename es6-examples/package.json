@@ -1,0 +1,27 @@
+{
+  "name": "es6-examples",
+  "version": "0.0.1",
+  "description": "ES6 (ES2015) examples",
+  "main": "GruntFile.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-babel": "^6.0.0",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1"
+  },
+  "scripts": {
+    "test": "True",
+    "build": "grunt babel:dist"
+  },
+  "keywords": [
+    "es6",
+    "javascript"
+  ],
+  "author": "nicor88",
+  "license": "ISC"
+}

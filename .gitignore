@@ -8,3 +8,7 @@ angular-examples/public/libs
 # angular-didrectives
 angular-directives/node_modules
 angular-directives/bower_components
+
+# es6-examples
+es6-examples/node_modules
+es6-examples/build
